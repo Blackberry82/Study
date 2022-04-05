@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tittle {
+    margin: 30px 450px;
+    font-size: 30px;
+}
+.boxes {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px #b7b3b3;
+    border-right: solid 2px #b7b3b3;
+    margin-right: 20px;
+
+}
+.fa-solid {
+    font-size: 25px;
+    color: #8f9696;
+    /*margin-bottom: 80px;*/
+
+}
+.name {
+    color: orange;
+    font-family: Caladea;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.txt {
+    color: #9dafaf;
+    font-family: Caladea;
+    font-size: 13px;
+    margin-top: 20px;
+    text-align: center;
+}
+button {
+    box-sizing: border-box;
+    background: #308367;
+    border-radius: 1px;
+    border: none;
+    width: 90px;
+    height: 30px;
+    color: white;
+    /*margin-bottom: 20px;*/
+    margin-top: 30px;
+}
