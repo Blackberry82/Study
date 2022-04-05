@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    width: 600px;
+    height: 1000px;
+    background: #b0a8a8;
+    margin: 50px 0;
+}
+.box1 {
+    height: 250px;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box2 {
+    height: 250px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.box3 {
+    height: 500px;
+    background: plum;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.in {
+    width: 180px;
+    height: 200px;
+    background: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #308367;
+    font-family: Arial;
+    font-size: 19px;
+}
+span {
+    font-size: 40px;
+    color: whitesmoke;
+    font-family: Arial;
+}
