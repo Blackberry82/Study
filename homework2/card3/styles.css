@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    width: 700px;
+    height: 400px;
+    background: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+.container {
+    width: 310px;
+    height: 350px;
+    margin: 0 10px 0;
+}
+.box {
+    display: flex;
+    width: 310px;
+    height: 90px;
+    background: mintcream;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.fa-regular {
+    font-size: 30px;
+    margin-left: 30px;
+    color: #9a8d8d;
+}
+.fa-solid {
+    font-size: 30px;
+    margin-left: 30px;
+    color: #9a8d8d;
+}
+.descript {
+    margin-left: 40px;
+}
+.name {
+    color: orange;
+    font-family: Alef;
+    font-size: 15px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-bottom: 5px;
+}
+.txt {
+    font-family: Alef;
+    font-size: 12px;
+    color: #7c7474;
+
+}
