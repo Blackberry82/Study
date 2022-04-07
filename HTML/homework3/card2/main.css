@@ -1,0 +1,34 @@
+body {
+    margin: 0
+}
+.main {
+    width: 700px;
+    height: 450px;
+    background: #d5cbcb;
+    box-sizing: border-box;
+    padding-top: 50px;
+    margin-left: 300px;
+}
+.big {
+    width: 700px;
+    height: 300px;
+    background: #252552;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.small1, .small2, .small3 {
+    width: 100px;
+    height: 100px;
+    background: mediumpurple;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -45px;
+}
+.small1 {
+    left: 185px;
+}
+.small3 {
+    right: 185px;
+}
