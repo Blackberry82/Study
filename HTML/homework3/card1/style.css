@@ -47,13 +47,13 @@ body {
 }
 .name {
     font-size: 35px;
-    font-family: Alef Arial ;
+    font-family: Alef Arial sans-serif ;
     font-weight: normal;
     padding-top: 65px;
 }
 .txt {
     font-size: 20px;
-    font-family: Candara;
+    font-family: Candara sans-serif;
     line-height: 35px;
     color: #8f9696;
     padding: 0 15px;
@@ -66,6 +66,6 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    font-family: Candara;
+    font-family: Candara sans-serif;
 
 }
