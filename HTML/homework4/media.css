@@ -1,0 +1,13 @@
+@media screen and (max-width: 600px) {
+    .wrap {
+        /*display: flex;*/
+        flex-direction: column;
+    }
+    .b-h {
+        width: 100%;
+    }
+    .h {
+        width: 100%;
+        height: 150px;
+    }
+}
