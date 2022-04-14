@@ -126,6 +126,12 @@ console.log(h);
 let k = 123 >= '123';
 console.log(k);
 
+let height = 23;
+let width = 10;
+let s1 = (height * width);
+console.log(s1);
+
+
 
 
 
