@@ -1,30 +1,33 @@
+
+
+let a = 1;
 let hello = 'hello';
 console.log(hello);
 alert('hello');
+
 document.write('hello');
-
 let owu = 'owu';
+
 console.log(owu);
-
 let com = 'com';
+
 console.log(com);
-
 let ua = 'ua';
-console.log(ua);
 
-let a = 1;
+console.log(ua);
 console.log(a);
 
 let b = 10;
 console.log(b);
+const num = 3.14;
 
 let c = -999;
 console.log(c);
 
-const num = 3.14;
+
 console.log(num);
 
-let d = 1>3;
+let d = 1 > 3;
 console.log(d);
 
 let e = (20 + 2) === 22;
@@ -41,18 +44,16 @@ let book1 = {
     name: 'Теплі історії в конвертах',
     pages: 150,
     gerne: 'biography',
-    autors: [
-        {name: 'Олександра Орлова'},
-        {name: 'Ірина Мацко'}
-    ]
+    autors: ['Олександра Орлова', 'Ірина Мацко']
     }
 console.log(book1);
 
 let firstName = 'Ірина';
 let middleName = 'Ігорівна';
-let lastName = 'Мирська'
+let lastName = 'Мирська';
+let person = firstName + ' ' + middleName + ' ' + lastName
 
-console.log(firstName + ' ' + middleName + ' ' + lastName);
+console.log(person);
 
 let n = 'Iryna';
 let f = 'Igorivna';
@@ -60,6 +61,11 @@ let y = 40;
 
 console.log(`${n} ${f} ${y}`);
 console.log(`Iryna Igorivna ${y}`)
+
+let imeno = prompt('What is your name?');
+let priymeno = prompt('What is your surname?');
+let roku = prompt('How old are you?');
+
 
 let a1 = 100;
 console.log(typeof a1);
@@ -70,8 +76,8 @@ console.log(typeof c1);
 
 let books = [
     {name: 'Joyland', pages: 123, gerne: 'roman', autor: 'Stephen Edwin King', yesr: 2013},
-    {name: 'Dr. Sleep', pages: 138, gerne: 'roman', autor: 'Stephen Edwin King', year: 2013},
-    {name: 'Mr. Mercedes', pages: 146, gerne: 'roman', autor: 'Stephen Edwin King', yesr: 2014},
+    {name: 'Dr; Sleep', pages: 138, gerne: 'roman', autor: 'Stephen Edwin King', year: 2013},
+    {name: 'Mr; Mercedes', pages: 146, gerne: 'roman', autor: 'Stephen Edwin King', yesr: 2014},
     {name: 'Revival', pages: 123, gerne: 'roman', autor: 'Stephen Edwin King', yesr: 2014},
     {name: 'Finders Keepers', pages: 123, gerne: 'roman', autor: 'Stephen Edwin King', year: 2015},
     {name: 'The Bazaar of Bad Dreams', pages: 123, gerne: 'roman', autor: 'Stephen Edwin King', yesr: 2015},
