@@ -1,0 +1,16 @@
+
+.userbox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.userblock {
+    display: flex;
+    flex-direction: column;
+}
+.address-block {
+    display: flex;
+    flex-direction: column;
+}
