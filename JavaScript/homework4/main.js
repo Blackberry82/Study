@@ -150,7 +150,7 @@
 // console.log(x(33, 44, 11, 22));
 
 // - створити функцію яка повертає найбільше число з масиву
-// let arr = [11,22,33];
+let arr = [11,22,33];
 // let x = (array) => {
 //     let max = array[0];
 //     for (let item of array) {
@@ -163,14 +163,14 @@
 // console.log(x(arr));
 
 // - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
-// let mit = (array) => {
-//     let sum = 0;
-//     for (let item of array) {
-//             sum += item;
-//     }
-//     return sum / 2;
-// }
-// console.log(mit(arr));
+let mit = (array) => {
+    let sum = 0;
+    for (let item of array) {
+            sum += item;
+    }
+    return sum / array.length;
+}
+console.log(mit(arr));
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 // let st = (...arg) => {

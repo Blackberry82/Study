@@ -34,7 +34,7 @@
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 // let str = ' dirty string   ';
-// let ohne = str.trim(' ');
+// let ohne = str.trim();
 // console.log(ohne);
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
@@ -52,28 +52,19 @@
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
-// let nums = [11,21,3];
-// let y = (nums.sort((a,b) => {
-//     if (a > b) {
-//         return 1
-//     }else if (b > a) {
-//         return  -1
-//     }else {
-//         return 0
+// let nums = [11,21,3];//
+// let x = [10,8,-7,55,987,-1011,0,1050,0];
+// let y = (arr, direction) => {
+//     if (direction === 'ascending') {
+//         arr.sort((a,b) => a - b);
+//     }else if (direction === 'descending') {
+//         arr.sort((a, b) => b - a);
 //     }
+//     return arr;
 // }
-// ));
-// console.log(y);
-// let x = (nums.sort((a, b) => {
-//     if (b > a) {
-//         return 1
-//     }else  if (a > b) {
-//         return  -1
-//     }else {
-//         return  0
-//     }
-// }));
-// console.log(x);
+// console.log(y(x, 'ascending'));
+// console.log(y(x, 'descending'));
+
 
 // - є масив
 // let coursesAndDurationArray = [
@@ -150,7 +141,7 @@ console.log(six);
 let red = decks.filter((deck) => deck.color === 'red');
 console.log(red);
 // - всі трефи від 9 та більше
-let spade = decks.filter((deck) => deck.value >= '9' && deck.cardSuit === 'spade');
+let spade = decks.filter((deck) => deck.value > '8' && deck.cardSuit === 'spade' || deck.value === '10' && deck.cardSuit === 'spade');
 console.log(spade);
 // {
     // cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
