@@ -95,19 +95,20 @@ function User(id, name, surname , email, phone) {
 //         this.drive = function () {
 //             console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
 //         }
-//         // this.info = function (Car) {
-//         //     for (const Key in Car) {
-//         //     }
-//         //     console.log(Key, Car[Key]);
-//         // }
+//         this.info = function () {
+//             for (const item in this) {
+//             }
+//             console.log(`${item} - ${this[item]}`);
+//         }
 //         this.increaseMaxSpeed = function (newSpeed){
-//             console.log(this.maxSpeed + newSpeed);
+//             // console.log(this.maxSpeed + newSpeed);
+//             this.maxSpeed += newSpeed;
 //         }
 //         this.changeYear = function(newValue) {
-//             console.log(this.year = newValue);
+//             this.year = newValue;
 //         }
 //         this.addDriver = function(driver) {
-//             console.log(driver);
+//             this.driver = driver;
 //         }
 // }
 // const x = new Car('C100', 'Honda',2020, 200, 1500);
@@ -125,83 +126,109 @@ function User(id, name, surname , email, phone) {
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-// class Car{
-//     constructor(model, producer, year, maxSpeed, engine) {
-//     this.model = model;
-//     this.producer = producer;
-//     this.year = year;
-//     this.maxSpeed = maxSpeed;
-//     this.engine = engine;
-//     this.drive = function () {
+// class Car {
+//     constructor (model, producer, year, maxSpeed, engine) {
+//         this.model = model;
+//         this.producer = producer;
+//         this.year = year;
+//         this.maxSpeed = maxSpeed;
+//         this.engine = engine;
+//     }
+//     drive () {
 //         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
 //     }
-//     // this.info = function (Car) {
-//     //     for (const Key in Car) {
-//     //     }
-//     //     console.log(Key, Car[Key]);
-//     // }
-//     this.increaseMaxSpeed = function (newSpeed){
-//         console.log(this.maxSpeed + newSpeed);
+    // info () {
+    //     for (const Key in this) {
+    //     }
+    //     console.log(Key, this[Key]);
+    // }
+//     increaseMaxSpeed (newSpeed){
+//         this.maxSpeed += newSpeed;
 //     }
-//     this.changeYear = function(newValue) {
-//         console.log(this.year = newValue);
+//     changeYear (newValue) {
+//         this.year = newValue;
 //     }
-//     this.addDriver = function(driver) {
-//         console.log(driver);
+//     addDriver (driver) {
+//         this.driver = driver;
 //     }
 // }
-// }
-// const auto = new Car('C20', 'hundiy', 2022, 230, 1400);
+// let auto = new Car('C20', 'hundiy', 2022, 230, 1400);
 // console.log(auto);
 // auto.drive();
-// // x.info();
+// // auto.info();
 // auto.increaseMaxSpeed(50);
 // auto.changeYear(2021);
 // auto.addDriver('Andriy');
 
 
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
-class Cinderella {
-    constructor(name, age, legSize) {
-        this.name = name;
-        this.age = age;
-        this.legSize = legSize;
-    }
-}
-const cinderella1 = new Cinderella('Maria', 32, 34);
-console.log(cinderella1);
-const cinderella2 = new Cinderella('Dascha', 33, 33);
-const cinderella3 = new Cinderella('Olja',22, 35);
-const cinderella4 = new Cinderella('Sveta', 12, 36);
-const cinderella5 = new Cinderella('Natascha', 15, 37);
-const cinderella6 = new Cinderella('Katya', 16, 38);
-const cinderella7 = new Cinderella('Valya', 17, 39);
-const cinderella8 = new Cinderella('Sofia', 18, 40);
-const cinderella9 = new Cinderella('lena', 19, 32);
-const cinderella10 = new Cinderella('Oxana', 20, 35);
-const cinderella = [];
-cinderella.push(cinderella1, cinderella2, cinderella3, cinderella4, cinderella5, cinderella6, cinderella7, cinderella8, cinderella9, cinderella10);
-console.log(cinderella);
+// class Cinderella {
+//     constructor(name, age, legSize) {
+//         this.name = name;
+//         this.age = age;
+//         this.legSize = legSize;
+//     }
+// }
+// const cinderella1 = new Cinderella('Maria', 32, 34);
+// console.log(cinderella1);
+// const cinderella2 = new Cinderella('Dascha', 33, 33);
+// const cinderella3 = new Cinderella('Olja',22, 35);
+// const cinderella4 = new Cinderella('Sveta', 12, 36);
+// const cinderella5 = new Cinderella('Natascha', 15, 37);
+// const cinderella6 = new Cinderella('Katya', 16, 38);
+// const cinderella7 = new Cinderella('Valya', 17, 39);
+// const cinderella8 = new Cinderella('Sofia', 18, 40);
+// const cinderella9 = new Cinderella('lena', 19, 32);
+// const cinderella10 = new Cinderella('Oxana', 20, 35);
+// const cinderella = [];
+// cinderella.push(cinderella1, cinderella2, cinderella3, cinderella4, cinderella5, cinderella6, cinderella7, cinderella8, cinderella9, cinderella10);
+// console.log(cinderella);
 
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
-class Prince {
-    constructor(name, age, findShue) {
-        this.name = name;
-        this.age = age;
-        this.findShue = findShue;
-    }
-}
-const prince = new Prince('Zlatan', 35, 36);
-//     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
-function theOne(arr) {
-    for (const item of arr) {
-       if (item.legSize === 36) {
-           console.log(item);
-       }
-    }
+// class Prince {
+//     constructor(name, age, findShue) {
+//         this.name = name;
+//         this.age = age;
+//         this.findShue = findShue;
+//     }
+// }
+// const prince = new Prince('Zlatan', 35, 36);
+// //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+// function theOne(arr, prince) {
+//     for (const item of arr) {
+//        if (item.legSize === prince.findShue) {
+//            console.log(`${item.name}`);
+//        }
+//     }
+//
+// }
+// theOne(cinderella, prince);
+// //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+// const oneLove = cinderella.find(value => value.legSize === prince.findShue);
+// console.log(oneLove);
 
+// - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
+// document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
+function cutString(str, n) {
+    let x = [];
+    for (let i = 0; i < str.length; i += n) {
+      x.push(str.substr(i, n));
+
+    }
+    return x;
 }
-theOne(cinderella);
-//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
-const oneLove = cinderella.find(value => value.legSize === 36);
-console.log(oneLove);
+document.writeln(cutString('delightful', 1));
+
+// - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
+// let str = 'Каждый охотник желает знать';
+// document.writeln(delete_characters(str, 7)); // Каждый
+
+let str = 'Каждый охотник желает знать';
+function delete_characters(str, lenght) {
+    let y = [];
+    for (i = 0; i < str.length; i += lenght) {
+    y.push(str.substr(i, lenght);)
+}
+    return y;
+}
+document.writeln(delete_characters(str, 7));
