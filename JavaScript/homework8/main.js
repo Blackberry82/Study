@@ -134,3 +134,38 @@ const subs = document.getElementsByClassName('sub-header');
 // for (const group of groups) {
 //     group.innerText = 'march 2022';
 // }
+// function foo(start) {
+//     console.log(start);
+//     let children = start.children;
+//     for (const child of children) {
+//         foo(child);
+//     }
+// }
+//
+// foo(document.body);
+const array = [1,2,3,[23,[1,2,3,4],[56,78,90,[12,34,456,78,[100,200,300]]],[1,2,3,4]],[45,56,687,89]];
+function x(arr) {
+    // console.log(arr);
+    for (let i = 0; i < arr.length; i++) {
+        const children = arr[i];
+        // console.log(children);
+        for (let j = 0; j < children.length; j++) {
+            const child = children[j];
+            // console.log(child);
+            for (let k = 0; k < child.length; k++) {
+                const childElement = child[k];
+                // console.log(childElement);
+                for (let l = 0; l < childElement.length; l++) {
+                    const item = childElement[l];
+                    // console.log(item);
+                    for (let m = 0; m < item.length; m++) {
+                        const itemElement = item[m];
+                        console.log(itemElement);
+                        x(arr.length);
+                    }
+                }
+            }
+        }
+        }
+}
+x(array);

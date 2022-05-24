@@ -60,3 +60,4 @@ for (let product of products) {
         </div>
     `);
 }
+console.log(Math.round(Math.random() * 1000));
