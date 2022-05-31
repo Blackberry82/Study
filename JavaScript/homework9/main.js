@@ -311,6 +311,7 @@ let usersList = [
 ];
 
 // Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
+// First resolve:
 // const group = document.createElement('div');
 // for (const user of usersList) {
 //     const user1 = document.createElement('div')
@@ -354,6 +355,43 @@ let usersList = [
 //     document.body.appendChild(group);
 //
 // }
+// SECOND RESOLVE:
+
+// const content = document.createElement('div');
+//
+// for (const user of usersList) {
+//     const userDiv = document.createElement('div');
+//     userDiv.style.marginTop = '10px';
+//
+//     for (const userKey in user) {
+//         const innerDiv = document.createElement('div');
+//
+//         if (typeof user[userKey] !== 'object') {
+//             innerDiv.innerText = `${userKey} : ${user[userKey]}`;
+//         } else {
+//             innerDiv.innerText = `${userKey}`;
+//             for (const item in user[userKey]) {
+//                 const itemDiv = document.createElement('div');
+//
+//                 if (typeof user[userKey][item] !== 'object') {
+//                     itemDiv.innerText = `${item} : ${user[userKey][item]}`;
+//                 } else {
+//                     itemDiv.innerText = `${item}`;
+//
+//                     for (const itemDivElement in user[userKey][item]) {
+//                         const itemElement = document.createElement('div');
+//                         itemElement.innerText = `${itemDivElement} : ${user[userKey][item][itemDivElement]}`;
+//                         itemDiv.append(itemElement);
+//                     }
+//                 }
+//                 innerDiv.append(itemDiv);
+//             }
+//         }
+//         userDiv.append(innerDiv);
+//     }
+//     content.append(userDiv);
+// }
+// document.body.append(content);
 
 // - є масив
 let simpsons = [
@@ -516,5 +554,19 @@ let coursesArray = [
 //     common.append(title, term, time, block);
 //     document.body.appendChild(common);
 // }
+
+// зробити div contenteditable ввести будь яке ціле слово. та при натисканні табуляції перетворити його на подвійний тег
+// asd ->tab-> <asd></asd>
+const block = document.createElement('div');
+block.setAttribute('contenteditable', 'true');
+block.style.height = '100px';
+block.style.background = 'pink';
+document.body.appendChild(block);
+block.onkeydown = (e) => {
+    const name = e.key;
+    if (name === 'Tab') {
+        block.innerText = `<${block.innerText}></${block.innerText}>`;
+    }
+}
 
 

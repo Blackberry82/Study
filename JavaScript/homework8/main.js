@@ -143,29 +143,67 @@ const subs = document.getElementsByClassName('sub-header');
 // }
 //
 // foo(document.body);
-const array = [1,2,3,[23,[1,2,3,4],[56,78,90,[12,34,456,78,[100,200,300]]],[1,2,3,4]],[45,56,687,89]];
-function x(arr) {
-    // console.log(arr);
-    for (let i = 0; i < arr.length; i++) {
-        const children = arr[i];
-        // console.log(children);
-        for (let j = 0; j < children.length; j++) {
-            const child = children[j];
-            // console.log(child);
-            for (let k = 0; k < child.length; k++) {
-                const childElement = child[k];
-                // console.log(childElement);
-                for (let l = 0; l < childElement.length; l++) {
-                    const item = childElement[l];
-                    // console.log(item);
-                    for (let m = 0; m < item.length; m++) {
-                        const itemElement = item[m];
-                        console.log(itemElement);
-                        x(arr.length);
-                    }
-                }
-            }
+
+
+// const array = [1,2,3,[23,[1,2,3,4],[56,78,90,[12,34,456,78,[100,200,300]]],[1,2,3,4]],[45,56,687,89]];
+// function x(arr) {
+//     // console.log(arr);
+//     for (let i = 0; i < arr.length; i++) {
+//         const children = arr[i];
+//         // console.log(children);
+//         for (let j = 0; j < children.length; j++) {
+//             const child = children[j];
+//             // console.log(child);
+//             for (let k = 0; k < child.length; k++) {
+//                 const childElement = child[k];
+//                 // console.log(childElement);
+//                 for (let l = 0; l < childElement.length; l++) {
+//                     const item = childElement[l];
+//                     // console.log(item);
+//                     for (let m = 0; m < item.length; m++) {
+//                         const itemElement = item[m];
+//                         console.log(itemElement);
+//                         x(arr.length);
+//                     }
+//                 }
+//             }
+//         }
+//         }
+// }
+// x(array);
+
+// написати рекурсивну функцію, яка збирає всі назви класів з файлу rules.html в окремий масив. масив вивести в консоль
+// function rec(startvalue) {
+//     let array = [];
+//     for (const item of startvalue) {
+//         if (item.children) {
+//             array.push(...rec(item.children));
+//         }
+//             array.push(...item.classList);
+//     }
+//     return array;
+// }
+// console.log(rec(document.body.children));
+
+// за допомоги рекурсії перебрати структуру сторінки. зробити об'єкт, всі заголовки покласти в (масив) характеристику headings,
+// всі параграфи покласти в характеристику (масив) paragraphs
+const head = [];
+const parag = [];
+const recursion = (item) => {
+    for (const Element of item.children) {
+        if (Element.localName === 'h2') {
+            head.push(Element.innerText);
+        } if (Element.localName === 'p') {
+            parag.push(Element.innerText );
+        } if (Element.children) {
+            recursion(Element);
         }
-        }
+    }
 }
-x(array);
+const wrap = document.getElementById('wrap');
+const obj = {
+    headers: head,
+    paragraphs: parag
+}
+recursion(wrap);
+console.log(obj);
