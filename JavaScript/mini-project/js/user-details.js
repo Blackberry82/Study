@@ -35,17 +35,24 @@ fetch('https://jsonplaceholder.typicode.com/users')
             for (const user of users) {
                 const {id, name, username, email, address, phone, website, company} = user;
                 button.onclick = () => {
-                    fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+                    fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
                         .then(value => value.json())
                         .then(posts => {
                                 // const postDiv = document.createElement('div');
                                 // postDiv.setAttribute('class', 'post');
                                 // document.body.append(postDiv);
                                 for (const post of posts) {
+                                    const {userId, id, title, body} = post;
                                     if (user.id === post.userId) {
-                                        const post = document.createElement('div');
-                                        post.innerHTML = `<h3>${post.title}</h3>`
-                                        document.body.append(post);
+                                        const postDiv = document.createElement('div');
+                                        postDiv.innerHTML = `<h3>${user.id} - ${post.title}</h3>`
+                                        document.body.append(postDiv);
+                                        const anchor = document.createElement('a');
+                                        anchor.setAttribute('href','http://localhost:63342/simpsons/JavaScript/mini-project/html/post-details.html')
+                                        const btn = document.createElement('button');
+                                        btn.innerText = 'POST';
+                                        anchor.append(btn);
+                                        postDiv.append(anchor);
                                     }
                                 }
                         })
