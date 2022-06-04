@@ -42,8 +42,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
                                 // postDiv.setAttribute('class', 'post');
                                 // document.body.append(postDiv);
                                 for (const post of posts) {
-                                    const {userId, id, title, body} = post;
-                                    if (user.id === post.userId) {
+                                    // const {userId, id, title, body} = post;
+                                    // if (user.id === post.userId) {
                                         const postDiv = document.createElement('div');
                                         postDiv.innerHTML = `<h3>${user.id} - ${post.title}</h3>`
                                         document.body.append(postDiv);
@@ -53,7 +53,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
                                         btn.innerText = 'POST';
                                         anchor.append(btn);
                                         postDiv.append(anchor);
-                                    }
+                                    // }
                                 }
                         })
                 }
