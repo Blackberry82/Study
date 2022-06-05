@@ -1,3 +1,9 @@
+/*Стилизация проекта -*/
+/*index.html - все блоки с user - по 2 в ряд. кнопки/ссылки находяться под информацией про user.*/
+/*user-details.html - блок с информацией про user вверху страницы. Кнопка ниже, на 90% ширины страницы, по центру.*/
+/*блоки с краткой информацией про post - в ряд по 5 объектов.*/
+/*post-details.html - блок с информацией про пост вверху. Комментарии - по 4 в ряд.*/
+/*Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так, что бы было видно их блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)*/
 #container {
     width: 100%;
     display: flex;
@@ -5,5 +11,21 @@
     flex-wrap: wrap;
 }
 .user {
-    width: 50%;
+    width: 48%;
+    box-sizing: border-box;
+    border: 3px solid forestgreen;
+    background: blanchedalmond;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+button {
+    width: 100px;
+    height: 25px;
+    background: limegreen;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 3px;
 }

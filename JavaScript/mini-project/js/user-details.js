@@ -1,3 +1,11 @@
+// На странице user-details.html:
+// 4 Вывести всю, без исключения, информацию про объект user на кнопку/ссылку которого был совершен клик ранее.
+// 5 Добавить кнопку "post of current user", при клике на которую, появляются title всех постов текущего юзера
+// (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
+// 6 Каждому посту добавить кнопку/ссылку, при клике на которую происходит переход на страницу post-details.html, которая имеет детальную информацию про текущий пост.
+
+
+
 const users = JSON.parse(localStorage.getItem('Key'));
 const content = document.getElementById('wrap');
 for (const user in users) {
@@ -29,36 +37,38 @@ const button = document.createElement('button');
 button.setAttribute('class', 'btn');
 button.innerText = 'post of current user';
 document.body.append(button);
-fetch('https://jsonplaceholder.typicode.com/users')
+const outPostDiv = document.createElement('div');
+outPostDiv.setAttribute('class', 'post');
+document.body.append(outPostDiv);
+button.addEventListener('click', () =>{
+    fetch(`https://jsonplaceholder.typicode.com/users/${users.id}/posts`)
         .then(value => value.json())
-        .then(users => {
-            for (const user of users) {
-                const {id, name, username, email, address, phone, website, company} = user;
-                button.onclick = () => {
-                    fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
-                        .then(value => value.json())
-                        .then(posts => {
-                                // const postDiv = document.createElement('div');
-                                // postDiv.setAttribute('class', 'post');
-                                // document.body.append(postDiv);
-                                for (const post of posts) {
-                                    // const {userId, id, title, body} = post;
-                                    // if (user.id === post.userId) {
-                                        const postDiv = document.createElement('div');
-                                        postDiv.innerHTML = `<h3>${user.id} - ${post.title}</h3>`
-                                        document.body.append(postDiv);
-                                        const anchor = document.createElement('a');
-                                        anchor.setAttribute('href','http://localhost:63342/simpsons/JavaScript/mini-project/html/post-details.html')
-                                        const btn = document.createElement('button');
-                                        btn.innerText = 'POST';
-                                        anchor.append(btn);
-                                        postDiv.append(anchor);
-                                    // }
-                                }
-                        })
-                }
+        .then(posts => {
+            for (const post of posts) {
+                const postDiv = document.createElement('div');
+                postDiv.classList.add('title');
+                outPostDiv.append(postDiv);
+                    postDiv.innerHTML = `<h4>${post.title}</h4>`;
+                    button.disabled = true;
+                    const anchor =document.createElement('a');
+                    anchor.setAttribute('href', 'post-details.html');
+                    const btn = document.createElement('button');
+                    btn.classList.add('button');
+                    btn.innerText = 'POST';
+                    anchor.append(btn);
+                    postDiv.append(anchor);
+                    btn.onclick = () => {
+                        const Key = 'post';
+                        localStorage.setItem(Key, JSON.stringify(post));
+                        console.log(JSON.parse(localStorage.getItem(Key)));
+                    }
+
             }
         })
+})
+
+
+
 
 
 
